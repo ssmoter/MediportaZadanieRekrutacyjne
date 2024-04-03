@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  mediportazadanierekrutacyjne:
+    image: ${DOCKER_REGISTRY-}mediportazadanierekrutacyjne
+    build:
+      context: .
+      dockerfile: MediportaZadanieRekrutacyjne/Dockerfile

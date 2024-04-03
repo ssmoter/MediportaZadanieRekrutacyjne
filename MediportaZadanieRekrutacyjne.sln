@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediportaZadanieRekrutacyjne", "MediportaZadanieRekrutacyjne\MediportaZadanieRekrutacyjne.csproj", "{2A836D8F-D059-4ED5-9B9A-BA569CED551A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediportaUnitTest", "MediportaUnitTest\MediportaUnitTest.csproj", "{05F01964-D53D-4743-9754-15F7D5856E77}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{C327AF27-9321-4A02-AB03-4D2FEE5A7CA1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		NoVariablesDefault|Any CPU = NoVariablesDefault|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A836D8F-D059-4ED5-9B9A-BA569CED551A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A836D8F-D059-4ED5-9B9A-BA569CED551A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A836D8F-D059-4ED5-9B9A-BA569CED551A}.NoVariablesDefault|Any CPU.ActiveCfg = Release|Any CPU
+		{2A836D8F-D059-4ED5-9B9A-BA569CED551A}.NoVariablesDefault|Any CPU.Build.0 = Release|Any CPU
+		{2A836D8F-D059-4ED5-9B9A-BA569CED551A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A836D8F-D059-4ED5-9B9A-BA569CED551A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05F01964-D53D-4743-9754-15F7D5856E77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05F01964-D53D-4743-9754-15F7D5856E77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05F01964-D53D-4743-9754-15F7D5856E77}.NoVariablesDefault|Any CPU.ActiveCfg = Release|Any CPU
+		{05F01964-D53D-4743-9754-15F7D5856E77}.NoVariablesDefault|Any CPU.Build.0 = Release|Any CPU
+		{05F01964-D53D-4743-9754-15F7D5856E77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05F01964-D53D-4743-9754-15F7D5856E77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C327AF27-9321-4A02-AB03-4D2FEE5A7CA1}.Debug|Any CPU.ActiveCfg = NoVariablesDefault
+		{C327AF27-9321-4A02-AB03-4D2FEE5A7CA1}.Debug|Any CPU.Build.0 = NoVariablesDefault
+		{C327AF27-9321-4A02-AB03-4D2FEE5A7CA1}.NoVariablesDefault|Any CPU.ActiveCfg = NoVariablesDefault
+		{C327AF27-9321-4A02-AB03-4D2FEE5A7CA1}.NoVariablesDefault|Any CPU.Build.0 = NoVariablesDefault
+		{C327AF27-9321-4A02-AB03-4D2FEE5A7CA1}.Release|Any CPU.ActiveCfg = NoVariablesDefault
+		{C327AF27-9321-4A02-AB03-4D2FEE5A7CA1}.Release|Any CPU.Build.0 = NoVariablesDefault
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {678F1ABC-5837-4B83-AEB8-8AA64704488A}
+	EndGlobalSection
+EndGlobal

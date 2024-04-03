@@ -1,0 +1,9 @@
+﻿@MediportaZadanieRekrutacyjne_HostAddress = 
+
+GET {{MediportaZadanieRekrutacyjne_HostAddress}}/tag/
+
+###
+
+GET {{MediportaZadanieRekrutacyjne_HostAddress}}/tag/refresh
+
+###

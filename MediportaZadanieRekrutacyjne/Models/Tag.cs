@@ -1,5 +1,7 @@
 ﻿using SQLite;
 
+using System.Text.Json;
+
 using System.Text.Json.Serialization;
 
 namespace MediportaZadanieRekrutacyjne.Models
@@ -19,7 +21,7 @@ namespace MediportaZadanieRekrutacyjne.Models
             Items ??= [];
         }
 
-        [Newtonsoft.Json.JsonConstructor]
+        [JsonConstructor]
         public TagResponse(Tag[] items, bool has_more, int quota_max, int quota_remaining)
         {
             Items = items;
@@ -59,9 +61,9 @@ namespace MediportaZadanieRekrutacyjne.Models
                 return;
 
             if (!string.IsNullOrEmpty(tag.CollectivesJson))
-                Collectives = Newtonsoft.Json.JsonConvert.DeserializeObject<Collectives[]>(tag.CollectivesJson);
+                Collectives = JsonSerializer.Deserialize<Collectives[]>(tag.CollectivesJson, CollectivesSerializerContext.Default.CollectivesArray);
             if (!string.IsNullOrEmpty(tag.SynonymsJson))
-                Synonyms = Newtonsoft.Json.JsonConvert.DeserializeObject<string[]>(tag.SynonymsJson);
+                Synonyms = JsonSerializer.Deserialize<string[]>(tag.SynonymsJson, TagResponseSerializerContext.Default.StringArray);
 
             Count = tag.Count;
             Has_Synonyms = tag.Has_Synonyms;
@@ -118,5 +120,7 @@ namespace MediportaZadanieRekrutacyjne.Models
     [JsonSerializable(typeof(Tag[]))]
     internal partial class TagSerializerContext : JsonSerializerContext
     { }
-
+    [JsonSerializable(typeof(Collectives[]))]
+    internal partial class CollectivesSerializerContext : JsonSerializerContext
+    { }
 }

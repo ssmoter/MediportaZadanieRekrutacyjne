@@ -24,7 +24,10 @@ namespace MediportaZadanieRekrutacyjne.Helper
             sb.Append(TagRequestValue.PageSize * TagRequestValue.PageSizeMulti);
             sb.Append(' ');
             sb.Append("OFFSET ");
-            sb.Append(page * TagRequestValue.PageSize * TagRequestValue.PageSizeMulti);
+            if (page == 1)
+                sb.Append(0);
+            else
+                sb.Append(page * TagRequestValue.PageSize * TagRequestValue.PageSizeMulti);
 
             return sb.ToString();
         }

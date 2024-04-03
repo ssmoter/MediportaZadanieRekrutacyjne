@@ -1,4 +1,6 @@
-﻿namespace MediportaZadanieRekrutacyjne.Models
+﻿using System.Text.Json;
+
+namespace MediportaZadanieRekrutacyjne.Models
 {
     public class TagEntities : Tag
     {
@@ -14,9 +16,9 @@
                 return;
 
             if (tag.Collectives is not null)
-                CollectivesJson = Newtonsoft.Json.JsonConvert.SerializeObject(tag.Collectives);
+                CollectivesJson = JsonSerializer.Serialize(tag.Collectives, CollectivesSerializerContext.Default.CollectivesArray);
             if (tag.Synonyms is not null)
-                SynonymsJson = Newtonsoft.Json.JsonConvert.SerializeObject(tag.Synonyms);
+                SynonymsJson = JsonSerializer.Serialize(tag.Synonyms, TagResponseSerializerContext.Default.StringArray);
 
             Count = tag.Count;
             Has_Synonyms = tag.Has_Synonyms;

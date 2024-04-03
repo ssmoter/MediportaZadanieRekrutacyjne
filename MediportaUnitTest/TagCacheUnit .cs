@@ -1,6 +1,5 @@
 ﻿using FluentAssertions;
 
-using MediportaZadanieRekrutacyjne.Data;
 using MediportaZadanieRekrutacyjne.Helper;
 using MediportaZadanieRekrutacyjne.Models;
 using MediportaZadanieRekrutacyjne.Services;
@@ -19,6 +18,14 @@ namespace MediportaUnitTest
 
         public static IEnumerable<object[]> ParametersSave =>
             [
+             [
+                new Tag[]{new Tag() { Collectives=new Collectives[] { new Collectives() { Description=""} } }
+                         ,new Tag() { Collectives = new Collectives[] { new Collectives() { Description = "" } } } }
+             ],
+            [
+                new Tag[]{new Tag() { Collectives=new Collectives[] { new Collectives() { Description=""} } ,Synonyms=new string[]{"as","dfzxc" } }
+                         ,new Tag() { Collectives = new Collectives[] { new Collectives() { Description = "" } },Synonyms=new string[]{"as","dfzxc" }  } }
+                 ],
              [new Tag[] {new(),new() }],
              [new Tag[] {new(),new(),new(),new() }],
             ];
@@ -41,9 +48,9 @@ namespace MediportaUnitTest
         public static IEnumerable<object[]> ParametersGet =>
             [
              [(ListOfEnums.SortType.name, ListOfEnums.OrderType.desc,1)],
-             [(ListOfEnums.SortType.popular, ListOfEnums.OrderType.desc,1)],
-             [(ListOfEnums.SortType.name, ListOfEnums.OrderType.asc,1)],
-             [(ListOfEnums.SortType.popular, ListOfEnums.OrderType.asc,1)],
+             [(ListOfEnums.SortType.popular, ListOfEnums.OrderType.desc,2)],
+             [(ListOfEnums.SortType.name, ListOfEnums.OrderType.asc,4)],
+             [(ListOfEnums.SortType.popular, ListOfEnums.OrderType.asc,10)],
             ];
 
 
